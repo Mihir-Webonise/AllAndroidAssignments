@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="11" key="DIALOG_Y_ORIGIN"/>
+		<item value="99" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="376" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.debug.ui.DebugView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="156" key="DIALOG_Y_ORIGIN"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="613" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.debug.ui"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.team.cvs.ui.importWizards"/>
+		</list>
+	</section>
+</section>

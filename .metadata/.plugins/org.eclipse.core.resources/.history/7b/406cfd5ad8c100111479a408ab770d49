@@ -1,0 +1,37 @@
+package cusine.restaurant.finder;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+public class MobileArrayAdapter extends ArrayAdapter<Employee> {
+	private final Context context;
+
+	private final List<Employee> values;
+
+	public MobileArrayAdapter(Context context, List<Employee> values) {
+		super(context, R.layout.displaycustomlist, values);
+		this.context = context;
+		this.values = values;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		LayoutInflater inflater = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);		
+
+		View rowView = inflater.inflate(R.layout.displaycustomlist, parent, false);
+		TextView textViewShowName = (TextView) rowView.findViewById(R.id.txtviewShowName);
+		textViewShowName.setText(values.get(position).getEmpName());
+		TextView textViewShowAge = (TextView) rowView.findViewById(R.id.txtviewShowAge);
+		int age=values.get(position).getAge();
+		String agestring = ""+age; 
+		textViewShowAge.setText(agestring);
+		return rowView;
+	}
+}

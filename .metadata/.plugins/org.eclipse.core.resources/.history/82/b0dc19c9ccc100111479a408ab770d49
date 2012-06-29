@@ -1,0 +1,53 @@
+package cusine.restaurant.finder;
+
+import java.io.Serializable;
+
+public class RestaurantDetails {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8659555579075953218L;
+	int restaurant_id;
+	String restaurant_name;
+	String restaurant_address;
+	String restaurant_cuisines;
+	double restaurant_rating;
+	
+	public String getRestaurant_cuisines() {
+		return restaurant_cuisines;
+	}
+	public void setRestaurant_cuisines(String restaurant_cuisines) {
+		this.restaurant_cuisines = restaurant_cuisines;
+	}
+	public int getRestaurant_id() {
+		return restaurant_id;
+	}
+	public void setRestaurant_id(int restaurant_id) {
+		this.restaurant_id = restaurant_id;
+	}
+	public String getRestaurant_name() {
+		return restaurant_name;
+	}
+	public void setRestaurant_name(String restaurant_name) {
+		this.restaurant_name = restaurant_name;
+	}
+	public String getRestaurant_address() {
+		return restaurant_address;
+	}
+	public void setRestaurant_address(String restaurant_address) {
+		this.restaurant_address = restaurant_address;
+	}
+	
+	
+	public double getRestaurant_rating() {
+		return restaurant_rating;
+	}
+	public void setRestaurant_rating(double restaurant_rating) {
+		this.restaurant_rating = restaurant_rating;
+	}
+	public String toString(){
+		return restaurant_name;
+	}
+
+}

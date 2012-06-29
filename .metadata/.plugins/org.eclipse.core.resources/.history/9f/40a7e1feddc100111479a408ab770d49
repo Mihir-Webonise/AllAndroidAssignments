@@ -1,0 +1,36 @@
+package cusine.restaurant.finder;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class CuisinesArrayAdapter extends ArrayAdapter<Cuisines> {
+	private final Context context;
+
+	private final List<Cuisines> values;
+
+	public CuisinesArrayAdapter(Context context, List<Cuisines> values) {
+		super(context, R.layout.cuisinescustomlist, values);
+		this.context = context;
+		this.values = values;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		LayoutInflater inflater = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);		
+
+		View rowView = inflater.inflate(R.layout.cuisinescustomlist, parent, false);
+		TextView textViewShowCuisineName = (TextView) rowView.findViewById(R.id.txtviewCuisineName);
+		textViewShowCuisineName.setText(values.get(position).getCuisine_name());
+		ImageView imgViewShowArrow = (ImageView) rowView.findViewById(R.id.imgviewArrow);
+		imgViewShowArrow.setImageBitmap(arrow_right);
+		return rowView;
+	}
+}

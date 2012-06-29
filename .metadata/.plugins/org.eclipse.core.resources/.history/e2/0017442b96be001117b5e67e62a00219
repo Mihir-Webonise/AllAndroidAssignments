@@ -1,0 +1,7 @@
+package cusine.restaurant.finder;
+
+import android.app.ListActivity;
+
+public class SingleMenuItemActivity extends ListActivity{
+
+}

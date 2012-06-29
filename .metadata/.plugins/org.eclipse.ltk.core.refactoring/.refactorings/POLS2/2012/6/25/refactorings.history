@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;RestClient.java&apos; to &apos;ZomatoAssignment/src/cusine.restaurant.finder&apos;&#x0A;- Original project: &apos;POLS2&apos;&#x0A;- Destination element: &apos;ZomatoAssignment/src/cusine.restaurant.finder&apos;&#x0A;- Original element: &apos;com.pols2.rest.RestClient.java&apos;" description="Copy compilation unit" destination="=ZomatoAssignment/src&lt;cusine.restaurant.finder" element1="/src&lt;com.pols2.rest{RestClient.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1340359871550" units="1" version="1.0"/>
+</session>

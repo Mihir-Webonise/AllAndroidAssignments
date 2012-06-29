@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textViewRestaurantDetailslbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Restaurant Details " />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textViewRestaurantNamelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name: " />
+
+        <TextView
+            android:id="@+id/textViewRestaurantNamevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textViewRestaurantAddresslbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Address: " />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textViewRestaurantAddressvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textViewRestaurantRatinglbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Rating: " />
+
+        <TextView
+            android:id="@+id/textViewRestaurantRatingvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="" />
+    </TableRow>
+
+</TableLayout>

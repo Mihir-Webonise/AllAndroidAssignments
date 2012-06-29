@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;layout.assignment.ShowRelative&apos; to &apos;ShowRelativeActivity&apos;&#x0A;- Original project: &apos;LayoutAssignment&apos;&#x0A;- Original element: &apos;layout.assignment.ShowRelative&apos;&#x0A;- Renamed element: &apos;layout.assignment.ShowRelativeActivity&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ShowRelative&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;layout.assignment{ShowRelative.java[ShowRelative" matchStrategy="1" name="ShowRelativeActivity" qualified="false" references="true" similarDeclarations="false" stamp="1340109410069" textual="false" version="1.0"/>
+</session>

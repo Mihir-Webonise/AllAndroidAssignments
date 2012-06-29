@@ -1,0 +1,5 @@
+package sqlite.list.project;
+
+public class RestaurantDetails {
+
+}

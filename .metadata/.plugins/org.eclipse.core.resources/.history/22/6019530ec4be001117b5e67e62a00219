@@ -1,0 +1,23 @@
+package cusine.restaurant.finder;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class RestaurantDetailsDisplayerActivity extends Activity{
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		RestaurantDetails restaurantDetails = null; 
+		setContentView(R.layout.restaurantdetails);
+		Bundle extras = getIntent().getExtras();
+		restaurantDetails = (RestaurantDetails) extras.getSerializable("selectedrestaurant");
+		TextView restaurantName = (TextView) findViewById(R.id.textViewRestaurantNamevalue);
+		TextView restaurantAddress = (TextView) findViewById(R.id.textViewRestaurantAddressvalue);
+		TextView restaurantRating = (TextView) findViewById(R.id.textViewRestaurantRatingvalue);
+		restaurantName.setText(restaurantDetails.getRestaurant_name());
+		restaurantAddress.setText(restaurantDetails.getRestaurant_address());
+		restaurantRating.setText(""+restaurantDetails.getRating());
+	}
+
+}

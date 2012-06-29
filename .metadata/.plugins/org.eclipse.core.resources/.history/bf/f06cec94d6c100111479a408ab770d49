@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+     <TextView
+        android:id="@+id/txtviewEnterName"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Name : " />
+
+    <TextView
+        android:id="@+id/txtviewShowName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtviewEnterAge"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Age : " />
+
+    <TextView
+        android:id="@+id/txtviewShowAge"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="" />
+        
+</LinearLayout>

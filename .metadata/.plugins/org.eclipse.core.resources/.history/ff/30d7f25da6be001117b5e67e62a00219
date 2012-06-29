@@ -1,0 +1,7 @@
+
+public class Cuisines {
+	
+	int cuisine_id;
+	String cuisine_name;
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewCuisinesListlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="List of Cuisines in your locality: "
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/txtviewCuisineName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgviewArrow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" >
+    </ImageView>
+
+</LinearLayout>

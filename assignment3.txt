@@ -1,0 +1,9 @@
+@mihir Assignment no:3 .. "Meri Uumar ki naujavano" :D
+Enter team member's name and age, show it in a list.
+Store their description in SQlite and display on a details page.
+
+Plan to accomplish the task:
+1) do 1 assignment each using list , AsynTask and SQLite in 50 mins each!
+
+2) do the consolidated task. 
+

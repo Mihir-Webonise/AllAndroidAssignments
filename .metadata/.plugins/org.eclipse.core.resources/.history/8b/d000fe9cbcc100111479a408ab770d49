@@ -1,0 +1,116 @@
+package cusine.restaurant.finder;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+//import android.util.Log;
+import android.util.Log;
+
+public class RestaurantsDataSource {
+	private SQLiteDatabase database;
+	private MySQLiteHelper dbHelper;
+	private String[] allColumns = { MySQLiteHelper.COLUMN_RESTAURANT_ID, MySQLiteHelper.COLUMN_RESTAURANT_NAME, 
+			MySQLiteHelper.COLUMN_RESTAURANT_ADDRESS, MySQLiteHelper.COLUMN_RESTAURANT_RATING, MySQLiteHelper.COLUMN_RESTAURANT_CUISINES };
+	
+	//private String allColumnsstring = MySQLiteHelper.COLUMN_CUISINE_ID+","+MySQLiteHelper.COLUMN_CUISINE_NAME;
+
+	public RestaurantsDataSource(Context context) {
+		// TODO Auto-generated constructor stub
+		dbHelper = new MySQLiteHelper(context);
+	}
+
+	public void open() throws SQLException {
+		database = dbHelper.getWritableDatabase();
+	}
+
+	public void close() {
+		dbHelper.close();
+	}
+
+	public RestaurantDetails createRestaurantDetails(int restaurant_id, String restaurant_name, String restaurant_address, String restaurant_cuisines, double restaurant_rating) {
+		ContentValues values = new ContentValues();
+		values.put(MySQLiteHelper.COLUMN_RESTAURANT_ID, restaurant_id);
+		values.put(MySQLiteHelper.COLUMN_RESTAURANT_NAME, restaurant_name);
+		values.put(MySQLiteHelper.COLUMN_RESTAURANT_ADDRESS, restaurant_address);
+		values.put(MySQLiteHelper.COLUMN_RESTAURANT_RATING, restaurant_rating);
+		values.put(MySQLiteHelper.COLUMN_RESTAURANT_CUISINES, restaurant_cuisines);
+		
+	
+		open();
+		database.insert(MySQLiteHelper.TABLE_RESTAURANTS, null, values);
+		Log.i("restaurant_cuisines::", String.valueOf(restaurant_cuisines));
+		Cursor cursor = database.query(MySQLiteHelper.TABLE_RESTAURANTS,
+				allColumns, null, null, null, null, null);
+		cursor.moveToFirst();
+		RestaurantDetails newRestaurant = cursorToRestaurantDetails(cursor);
+		cursor.close();
+		close();
+		return newRestaurant;
+	}
+
+	public void deleteRestaurantDetails(RestaurantDetails restaurantDetails) {
+		int id = restaurantDetails.getRestaurant_id();
+		System.out.println("RestaurantDetails deleted with id: " + id);
+		database.delete(MySQLiteHelper.TABLE_RESTAURANTS, MySQLiteHelper.COLUMN_CUISINE_ID
+				+ " = " + id, null);
+	}
+	
+	public void truncateRestaurantDetails() {		
+		open();
+		database.delete(MySQLiteHelper.TABLE_RESTAURANTS, null, null);
+		close();		
+	}
+
+	public List<RestaurantDetails> getAllRestaurantDetails() {
+		List<RestaurantDetails> allRestaurantDetails = new ArrayList<RestaurantDetails>();
+        open();
+		Cursor cursor = database.query(MySQLiteHelper.TABLE_RESTAURANTS,
+				allColumns, null, null, null, null, null);
+
+		cursor.moveToFirst();
+		while (!cursor.isAfterLast()) {
+			RestaurantDetails restaurantDetails = cursorToRestaurantDetails(cursor);
+			allRestaurantDetails.add(restaurantDetails);
+			cursor.moveToNext();
+		}
+		// Make sure to close the cursor
+		cursor.close();
+		close();
+		return allRestaurantDetails;
+	}
+	
+	public List<RestaurantDetails> getSpecificRestaurantDetails(String cuisinename) {
+		List<RestaurantDetails> allRestaurantDetails = new ArrayList<RestaurantDetails>();
+        open();
+		Cursor cursor = database.query(MySQLiteHelper.TABLE_RESTAURANTS,
+				allColumns, null, null, null, null, null);
+
+		cursor.moveToFirst();
+		while (!cursor.isAfterLast()) {
+			RestaurantDetails restaurantDetails = cursorToRestaurantDetails(cursor);
+			allRestaurantDetails.add(restaurantDetails);
+			cursor.moveToNext();
+		}
+		// Make sure to close the cursor
+		cursor.close();
+		close();
+		return allRestaurantDetails;
+	}
+
+	private RestaurantDetails cursorToRestaurantDetails(Cursor cursor) {
+		RestaurantDetails restaurantDetails = new RestaurantDetails();
+		restaurantDetails.setRestaurant_id(cursor.getInt(0));
+		restaurantDetails.setRestaurant_name(cursor.getString(1));
+		restaurantDetails.setRestaurant_address(cursor.getString(2));
+		restaurantDetails.setRestaurant_cuisines(cursor.getString(3));
+		restaurantDetails.setRestaurant_rating(cursor.getDouble(4));
+		return restaurantDetails;
+	}
+}
+
+

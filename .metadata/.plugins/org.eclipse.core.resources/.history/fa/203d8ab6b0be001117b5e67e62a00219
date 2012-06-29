@@ -1,0 +1,14 @@
+package cusine.restaurant.finder;
+
+import sqlite.list.project.R;
+import android.app.Activity;
+import android.os.Bundle;
+
+public class RestaurantDetailsDisplayerActivity extends Activity{
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.restaurantdetails);
+	}
+
+}

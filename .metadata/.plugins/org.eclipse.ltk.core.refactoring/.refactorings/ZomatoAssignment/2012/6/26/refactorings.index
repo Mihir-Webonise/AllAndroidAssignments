@@ -1,0 +1,33 @@
+1340608797909	Rename type 'SingleMenuItemActivity'
+1340610321361	Rename field 'TAG_CUISINES'
+1340610358433	Rename field 'TAG_CUISINE'
+1340610384749	Rename field 'TAG_CUISINENAME'
+1340612853780	Rename local variable 'contactList'
+1340616028885	Delete element
+1340620706766	Rename local variable 'jsonCuisines'
+1340620752908	Rename field 'cuisines'
+1340621177311	Rename local variable 'specificcuisine'
+1340621426621	Rename local variable 'selectedcuisine'
+1340634488282	Delete element
+1340635042160	Delete element
+1340636040441	Rename type 'ZomatoAssignmentActivity'
+1340636133166	Copy compilation unit
+1340636140116	Delete element
+1340686555865	Rename type 'NewZomatoAssignmentActivity'
+1340687881803	Rename resource 'zomato.xml'
+1340696282591	Rename local variable 'empname'
+1340696308716	Rename local variable 'age'
+1340722082819	Rename local variable 'newComment'
+1340775593304	Rename method 'getAllCuisiness'
+1340779286973	Rename local variable 'cuisineid'
+1340779315544	Rename local variable 'cuisinename'
+1340779750101	Rename local variable 'newCuisine'
+1340780395560	Rename local variable 'RestaurantDetailss'
+1340780595107	Rename local variable 'RestaurantDetails'
+1340780608634	Rename local variable 'RestaurantDetails'
+1340781527355	Rename local variable 'RestaurantDetails'
+1340783360798	Rename local variable 'Cuisiness'
+1340958355552	Rename local variable 'allRestaurantDetails'
+1340966995718	Rename local variable 'textViewShowName'
+1340967114618	Rename type 'MobileArrayAdapter'
+1340971903395	Rename local variable 'values'
